@@ -56,6 +56,7 @@
 
 html {
   scroll-behavior: smooth;
+  /*  font-size: clamp(15px, 1.2vw + 10px, 20px); */
   font-size: 20px;
   text-size-adjust: 100%
 }
@@ -588,7 +589,7 @@ body::after {
 }
 
 .nav-logo-img {
-  height: 100px;
+  height: clamp(50px, 8vh, 100px);
   width: auto;
   display: block;
   object-fit: contain;
@@ -755,6 +756,7 @@ body::after {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  padding-top: clamp(80px, 12vh, 140px);
 }
 
 .hero-bg {
@@ -899,7 +901,7 @@ body::after {
   opacity: 0;
   animation: fadeUp 1s .45s var(--ease-out) forwards;
   max-width: 880px;
-  font-size: 130px;
+  font-size: clamp(2.4rem, 9vw, 6.5rem);
 }
 
 .hero-title .italic-line {
