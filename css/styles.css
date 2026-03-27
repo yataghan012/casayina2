@@ -2786,6 +2786,19 @@ footer {
 }
 
 @media(max-width:768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .btn-lg {
+    font-size: 0.62rem;
+    padding: 0.95rem 1.8rem;
+  }
+
+  .btn {
+    max-width: 100%;
+  }
+
   .nav-logo {
     margin-left: 0;
   }
@@ -2796,6 +2809,17 @@ footer {
 
   .nav-hamburger {
     display: flex
+  }
+
+  .hero-blob {
+    display: none;
+  }
+
+  section,
+  .hero,
+  .hero-scene {
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 
   .hero-stat-strip {
