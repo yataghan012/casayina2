@@ -2826,6 +2826,16 @@ footer {
     display: none
   }
 
+  .gifts-btns {
+    width: 100%;
+  }
+
+  .gifts-btns .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
   .gallery-mosaic {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 180px 180px 180px
