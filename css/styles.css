@@ -270,7 +270,7 @@ body::after {
 
 .ldr-sub {
   font-family: var(--ff-label);
-  font-size: 30px;
+  font-size: clamp(.6rem, 2vw, .95rem);
   letter-spacing: .22em;
   text-transform: uppercase;
   color: var(--gold);
@@ -899,7 +899,6 @@ body::after {
   opacity: 0;
   animation: fadeUp 1s .45s var(--ease-out) forwards;
   max-width: 880px;
-  font-size: 120px;
 }
 
 .hero-title .italic-line {
@@ -2830,13 +2829,39 @@ footer {
     grid-template-columns: 1fr
   }
 
+  .hero-content {
+    text-align: center;
+    padding: 0 1.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-eyebrow {
+    justify-content: center;
+  }
+
+  .hero-body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .hero-actions {
-    flex-direction: column
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-actions .btn {
     width: 100%;
-    max-width: 280px
+    max-width: 320px;
+  }
+
+  .hero-scroll-hint {
+    display: none;
+  }
+
+  .sp-grid {
+    grid-template-columns: 1fr;
   }
 
   .gp-custom {
@@ -2856,7 +2881,16 @@ footer {
   }
 
   .sf-grid {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .page-hero-body {
+    margin: 0 auto;
   }
 }
 
