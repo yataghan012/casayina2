@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Casa Yina — Spa & Naturaleza · Villa Belgrano</title>
+  <meta name="description"
+    content="Refugio de paz junto al río. Día Spa, masajes, pileta y merienda casera en Villa Belgrano, Córdoba.">
+  <meta property="og:title" content="Casa Yina — Spa & Naturaleza">
+  <meta property="og:description" content="Una casona junto al río en Villa Belgrano, Córdoba.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Cursor -->
+  <div class="c-dot" id="cDot"></div>
+  <div class="c-ring" id="cRing"></div>
+
+  <!-- Page transition curtain -->
+  <div id="curtain">
+    <div class="curtain-col"></div>
+    <div class="curtain-col"></div>
+    <div class="curtain-col"></div>
+    <div class="curtain-col"></div>
+    <div class="curtain-col"></div>
+  </div>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="ldr-mark">
+      <div class="ldr-word" id="ldrWord"></div>
+      <div class="ldr-sub">Spa · Naturaleza · Villa Belgrano</div>
+    </div>
+    <div class="ldr-bar">
+      <div class="ldr-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-logo" onclick="navigate('home')">
+      <img src="logo.png" alt="Casa Yina" class="nav-logo-img">
+    </div>
+    <div class="nav-menu">
+      <span class="nav-link" data-page="home">Inicio</span>
+      <span class="nav-link" data-page="nosotras">Nosotras</span>
+      <span class="nav-link" data-page="servicios">Servicios</span>
+      <span class="nav-link" data-page="regalos">Regalos</span>
+      <button class="btn btn-gold btn-sm nav-cta" onclick="navigate('reservas')">Reservar</button>
+    </div>
+    <button class="nav-hamburger" id="navHam" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div id="mob-nav">
+    <span class="mob-link" onclick="navigate('home')">Inicio</span>
+    <span class="mob-link" onclick="navigate('nosotras')">Nosotras</span>
+    <span class="mob-link" onclick="navigate('servicios')">Servicios</span>
+    <span class="mob-link" onclick="navigate('regalos')">Regalos</span>
+    <button class="btn btn-gold" style="margin-top:.8rem" onclick="navigate('reservas')">✨ Reservar ahora</button>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════
+     HOME PAGE
+════════════════════════════════════════════════════ -->
+  <div class="page" id="page-home">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-canvas">
+        <div class="hero-scene">
+          <div class="hero-blob hero-blob-1"></div>
+          <div class="hero-blob hero-blob-2"></div>
+          <div class="hero-blob hero-blob-3"></div>
+          <!-- Flora SVG -->
+          <svg class="hero-flora" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice">
+            <g>
+              <path d="M-80 920 Q100 720 160 520 Q185 410 270 360" stroke="#4e6b45" stroke-width="2" fill="none"
+                opacity=".8" />
+              <path d="M160 520 Q110 455 75 435" stroke="#4e6b45" stroke-width="1.5" fill="none" opacity=".6" />
+              <path d="M195 470 Q145 425 128 385" stroke="#4e6b45" stroke-width="1.5" fill="none" opacity=".5" />
+              <path d="M225 415 Q190 372 182 328" stroke="#4e6b45" stroke-width="1.2" fill="none" opacity=".45" />
+              <ellipse cx="65" cy="428" rx="20" ry="11" fill="#3a5c35" opacity=".6" transform="rotate(-30 65 428)" />
+              <ellipse cx="115" cy="378" rx="16" ry="9" fill="#486040" opacity=".5" transform="rotate(-48 115 378)" />
+              <ellipse cx="176" cy="322" rx="22" ry="10" fill="#3a5c35" opacity=".55" transform="rotate(-22 176 322)" />
+              <ellipse cx="50" cy="455" rx="13" ry="7" fill="#5a7a50" opacity=".4" transform="rotate(12 50 455)" />
+              <ellipse cx="130" cy="398" rx="10" ry="6" fill="#4e6b45" opacity=".35" transform="rotate(-60 130 398)" />
+              <path d="M1520 820 Q1340 640 1280 440 Q1258 340 1200 280" stroke="#4e6b45" stroke-width="2" fill="none"
+                opacity=".7" />
+              <path d="M1280 440 Q1318 398 1335 360" stroke="#4e6b45" stroke-width="1.5" fill="none" opacity=".55" />
+              <path d="M1248 390 Q1288 348 1296 308" stroke="#4e6b45" stroke-width="1.2" fill="none" opacity=".45" />
+              <ellipse cx="1338" cy="353" rx="20" ry="11" fill="#3a5c35" opacity=".55"
+                transform="rotate(32 1338 353)" />
+              <ellipse cx="1298" cy="302" rx="16" ry="9" fill="#486040" opacity=".45" transform="rotate(18 1298 302)" />
+              <ellipse cx="1195" cy="275" rx="24" ry="11" fill="#3a5c35" opacity=".5"
+                transform="rotate(-12 1195 275)" />
+              <circle cx="420" cy="180" r="3.5" fill="#7a9e6e" opacity=".22" />
+              <circle cx="560" cy="320" r="5" fill="#c09850" opacity=".12" />
+              <circle cx="880" cy="140" r="4" fill="#7a9e6e" opacity=".18" />
+              <circle cx="1050" cy="380" r="3" fill="#c09850" opacity=".12" />
+              <circle cx="320" cy="550" r="6" fill="#7a9e6e" opacity=".1" />
+              <circle cx="780" cy="80" r="4" fill="#c09850" opacity=".1" />
+            </g>
+          </svg>
+          <!-- Water ripple canvas layer -->
+          <div class="hero-ripple" id="heroRipple"></div>
+        </div>
+      </div>
+      <div class="hero-bg"></div>
+
+      <div class="hero-stat-strip">
+        <div class="hero-stat">
+          <span class="hero-stat-num">5.0</span>
+          <span class="hero-stat-lbl">Google<br>Rating</span>
+        </div>
+        <div class="hero-stat-sep"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">+500</span>
+          <span class="hero-stat-lbl">Mujeres<br>atendidas</span>
+        </div>
+        <div class="hero-stat-sep"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">3</span>
+          <span class="hero-stat-lbl">Años de<br>historia</span>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-line"></span>
+          <span class="t-label">Villa Belgrano · Córdoba, Argentina</span>
+        </div>
+        <h1 class="t-display hero-title">
+          🌿 Una casona<br>
+          <span class="italic-line">junto al río</span>
+        </h1>
+        <p class="hero-body">
+          En el corazón de Villa Belgrano, Córdoba.<br>
+          Un refugio donde la naturaleza, el silencio y el bienestar se fusionan en una sola experiencia.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-gold btn-lg" onclick="navigate('reservas')">✨ Reservar experiencia</button>
+          <button class="btn btn-ghost btn-lg" onclick="navigate('servicios')">Ver servicios</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto">
+      <div class="wrap">
+        <div class="manifesto-inner">
+          <div class="manifesto-quote" data-reveal="left">
+            <blockquote>
+              "Ven con las manos vacías.<br>
+              Llevate el alma llena."
+            </blockquote>
+            <cite>— Casa Yina · Villa Belgrano</cite>
+          </div>
+          <div class="manifesto-values">
+            <div class="val-item" data-reveal="up" data-delay="1">
+              <div class="val-icon">🌊</div>
+              <div class="val-text">
+                <strong>Junto al río</strong>
+                <span>El sonido del agua como fondo</span>
+              </div>
+            </div>
+            <div class="val-item" data-reveal="up" data-delay="2">
+              <div class="val-icon">🌿</div>
+              <div class="val-text">
+                <strong>Naturaleza real</strong>
+                <span>Parque, jardines y verde auténtico</span>
+              </div>
+            </div>
+            <div class="val-item" data-reveal="up" data-delay="3">
+              <div class="val-icon">🤲</div>
+              <div class="val-text">
+                <strong>Cuidado genuino</strong>
+                <span>Masajes y terapias con alma</span>
+              </div>
+            </div>
+            <div class="val-item" data-reveal="up" data-delay="4">
+              <div class="val-icon">🫖</div>
+              <div class="val-text">
+                <strong>Sabores caseros</strong>
+                <span>Merienda artesanal con amor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section">
+      <div class="wrap">
+        <div class="gallery-header">
+          <div data-reveal="left">
+            <div class="t-label" style="margin-bottom:.6rem">El lugar</div>
+            <h2 class="t-h2">🙌🏼 Sentilo antes<br><em class="t-italic t-gold">de venir</em></h2>
+          </div>
+          <div data-reveal="right">
+            <button class="btn btn-ghost btn-sm" onclick="navigate('nosotras')">Ver galería completa →</button>
+          </div>
+        </div>
+        <div class="gallery-mosaic" data-reveal="up" data-delay="1">
+          <div class="gmosaic-item">
+            <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=900&q=85"
+              alt="La pileta"
+              style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1)">
+            <span class="gmosaic-cap">La pileta</span>
+          </div>
+          <div class="gmosaic-item">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=85"
+              alt="El parque"
+              style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1)">
+            <span class="gmosaic-cap">El parque</span>
+          </div>
+          <div class="gmosaic-item">
+            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=900&q=85"
+              alt="Masajes"
+              style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1)">
+            <span class="gmosaic-cap">Masajes</span>
+          </div>
+          <div class="gmosaic-item">
+            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=900&q=85"
+              alt="Merienda casera"
+              style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1)">
+            <span class="gmosaic-cap">Merienda casera</span>
+          </div>
+          <div class="gmosaic-item">
+            <img src="https://images.unsplash.com/photo-1439853949212-36089825a246?auto=format&fit=crop&w=900&q=85"
+              alt="El río"
+              style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1)">
+            <span class="gmosaic-cap">El río</span>
+          </div>
+          <div class="gmosaic-item">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=85"
+              alt="La casona"
+              style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1)">
+            <span class="gmosaic-cap">La casona</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <section class="services-preview">
+      <div class="wrap">
+        <div class="sp-header">
+          <div class="sp-tag">
+            <span class="t-label">Nuestras experiencias</span>
+          </div>
+          <h2 class="t-h2" style="margin-bottom:.5rem" data-reveal="up">Diseñadas para<br><em
+              class="t-italic t-gold">que vuelvas renovada</em></h2>
+        </div>
+        <div class="sp-grid">
+          <div class="sp-card featured" data-reveal="up" data-delay="1">
+            <div class="sp-card-img-top"><img
+                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=85"
+                alt="Día Spa"></div>
+            <span class="sp-badge">⭐ Más elegido</span>
+            <div class="sp-icon">🌿</div>
+            <h3 class="t-h3 sp-card-title">Día Spa Completo</h3>
+            <div class="sp-duration">⏱ 3 horas · Hasta 6 personas</div>
+            <p class="sp-desc">La experiencia más completa. Pileta, parque, merienda casera y masaje relajante en un día
+              perfecto junto al río.</p>
+            <div class="sp-includes">
+              <div class="sp-inc-item">Acceso al parque y jardines</div>
+              <div class="sp-inc-item">Uso de pileta · toallas incluidas</div>
+              <div class="sp-inc-item">Merienda casera con infusión</div>
+              <div class="sp-inc-item">Masaje relajante 40 min</div>
+            </div>
+            <div class="sp-footer">
+              <div>
+                <div class="sp-price-label">Desde</div>
+                <div class="sp-price-val">$XX.000</div>
+                <div class="sp-price-unit">por persona</div>
+              </div>
+              <button class="btn btn-gold" onclick="navigate('reservas')">Reservar este plan</button>
+            </div>
+          </div>
+
+          <div class="sp-card" data-reveal="up" data-delay="2">
+            <div class="sp-card-img-top"><img
+                src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=700&q=85"
+                alt="Masaje"></div>
+            <div class="sp-icon">🤲</div>
+            <div class="sp-duration">⏱ 60 minutos</div>
+            <p class="sp-desc">Técnicas suecas y de tejido profundo para liberar tensiones y reconectar con tu cuerpo.
+            </p>
+            <div class="sp-includes">
+              <div class="sp-inc-item">Masaje sueco o tejido profundo</div>
+              <div class="sp-inc-item">Aceites esenciales naturales</div>
+              <div class="sp-inc-item">Ambiente con aromas y música</div>
+              <div class="sp-inc-item">Té de hierbas post-masaje</div>
+            </div>
+            <div class="sp-footer">
+              <div>
+                <div class="sp-price-label">Desde</div>
+                <div class="sp-price-val">$XX.000</div>
+                <div class="sp-price-unit">por persona</div>
+              </div>
+              <button class="btn btn-sage" onclick="navigate('reservas')">Reservar</button>
+            </div>
+          </div>
+
+          <div class="sp-card" data-reveal="up" data-delay="3">
+            <div class="sp-card-img-top"><img
+                src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=700&q=85"
+                alt="Merienda"></div>
+            <div class="sp-icon">🫖</div>
+            <h3 class="t-h3 sp-card-title">Tarde de Merienda & Parque</h3>
+            <div class="sp-duration">⏱ 2 horas</div>
+            <p class="sp-desc">Recorrido por el parque, uso de pileta y merienda casera servida junto al río en un
+              ambiente único.</p>
+            <div class="sp-includes">
+              <div class="sp-inc-item">Acceso parque y pileta</div>
+              <div class="sp-inc-item">Merienda casera completa</div>
+              <div class="sp-inc-item">Infusiones artesanales</div>
+              <div class="sp-inc-item">Mesa en el jardín</div>
+            </div>
+            <div class="sp-footer">
+              <div>
+                <div class="sp-price-label">Desde</div>
+                <div class="sp-price-val">$XX.000</div>
+                <div class="sp-price-unit">por persona</div>
+              </div>
+              <button class="btn btn-sage" onclick="navigate('reservas')">Reservar</button>
+            </div>
+          </div>
+
+          <div class="sp-card" data-reveal="up" data-delay="4">
+            <div class="sp-card-img-top"><img
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=700&q=85"
+                alt="Experiencia Grupal"></div>
+            <div class="sp-icon">👯‍♀️</div>
+            <h3 class="t-h3 sp-card-title">Experiencia Grupal</h3>
+            <div class="sp-duration">⏱ 4 horas · Grupos de amigas</div>
+            <p class="sp-desc">Para cumpleaños, despedidas o simplemente estar juntas. Espacio exclusivo y atención
+              personalizada.</p>
+            <div class="sp-includes">
+              <div class="sp-inc-item">Espacio privado exclusivo</div>
+              <div class="sp-inc-item">Masajes para todo el grupo</div>
+              <div class="sp-inc-item">Merienda abundante</div>
+              <div class="sp-inc-item">Decoración especial opcional</div>
+            </div>
+            <div class="sp-footer">
+              <div>
+                <div class="sp-price-label">Precio</div>
+                <div class="sp-price-val" style="font-size:1.4rem">Consultar</div>
+                <div class="sp-price-unit">por grupo</div>
+              </div>
+              <button class="btn btn-ghost" onclick="navigate('reservas')">Consultar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NATURE BANNER -->
+    <div style="height:clamp(260px,38vh,480px);overflow:hidden;position:relative;">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1800&q=85"
+        alt="Río Villa Belgrano" id="parallaxBanner"
+        style="width:100%;height:130%;object-fit:cover;display:block;transform:translateY(0);will-change:transform;filter:brightness(.75) saturate(.85)">
+      <div
+        style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,26,12,.3),rgba(10,26,12,.6));display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;text-align:center;padding:2rem">
+        <p
+          style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(192,152,80,.9)">
+          El río de fondo</p>
+        <p
+          style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,3.2rem);font-weight:300;font-style:italic;color:rgba(237,229,208,.95);max-width:640px;line-height:1.25">
+          "Un lugar donde el tiempo se detiene y el alma respira"</p>
+      </div>
+    </div>
+
+    <!-- GIFTS STRIP -->
+    <section class="gifts-strip">
+      <div class="gifts-bg"></div>
+      <div class="wrap gifts-content">
+        <div class="gifts-layout">
+          <div class="gifts-text">
+            <div class="t-label" style="margin-bottom:.9rem" data-reveal="up">Para regalar</div>
+            <h2 class="t-h2" style="margin-bottom:1.2rem" data-reveal="up" data-delay="1">
+              ✨ Regalá una<br><em class="t-italic t-gold">experiencia</em>
+            </h2>
+            <p class="t-body" style="margin-bottom:2.2rem" data-reveal="up" data-delay="2">
+              La forma más linda de decirle que la querés.<br>
+              Porque los regalos que se <em>sienten</em>, no se olvidan.
+            </p>
+            <div class="gifts-btns" data-reveal="up" data-delay="3">
+              <button class="btn btn-terra" onclick="navigate('regalos')">✨ Ver gift cards</button>
+              <button class="btn btn-ghost" onclick="navigate('regalos')">Armar experiencia personalizada</button>
+            </div>
+          </div>
+          <div class="gifts-cards" data-reveal="right">
+            <div class="gc">
+              <div class="gc-icon">🎁</div>
+              <div class="gc-text">
+                <strong>Gift Card Digital</strong>
+                <span>Enviá al instante con tu mensaje personal</span>
+              </div>
+            </div>
+            <div class="gc">
+              <div class="gc-icon">🌺</div>
+              <div class="gc-text">
+                <strong>Experiencia Personalizada</strong>
+                <span>Armamos juntas el plan perfecto para ella</span>
+              </div>
+            </div>
+            <div class="gc">
+              <div class="gc-icon">💆‍♀️</div>
+              <div class="gc-text">
+                <strong>Día Spa para Mamá</strong>
+                <span>El mejor regalo para el Día de la Madre</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews-section">
+      <div class="wrap">
+        <div class="reviews-header" data-reveal="up">
+          <div class="t-label">Lo que dicen ellas</div>
+          <h2 class="t-h2" style="margin-top:.6rem">Reseñas <em class="t-italic t-gold">reales</em></h2>
+          <div class="reviews-aggregate">
+            <span class="ra-score">5.0</span>
+            <div>
+              <div class="ra-stars">★★★★★</div>
+              <div class="ra-count">Reseñas de Google Maps</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="marquee-wrap">
+        <div class="marquee-track" id="reviewsTrack">
+          <!-- Reviews -->
+          <div class="rv-card" style="position:relative">
+            <span class="rv-g">G</span>
+            <div class="rv-head">
+              <div class="rv-av" style="background:#3a5c35">M</div>
+              <div><span class="rv-name">María Fernanda G.</span><span class="rv-date">Hace 2 semanas</span></div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">"Una experiencia única. El lugar es una maravilla, el parque es hermoso y el masaje fue
+              exactamente lo que necesitaba. Me fui completamente renovada."</p>
+          </div>
+          <div class="rv-card" style="position:relative">
+            <span class="rv-g">G</span>
+            <div class="rv-head">
+              <div class="rv-av" style="background:#7a5035">S</div>
+              <div><span class="rv-name">Sofía R.</span><span class="rv-date">Hace 1 mes</span></div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">"Fui con mis amigas para el cumpleaños de una de nosotras. Fue absolutamente mágico. La
+              casona, la merienda, la atención. ¡100% recomendado!"</p>
+          </div>
+          <div class="rv-card" style="position:relative">
+            <span class="rv-g">G</span>
+            <div class="rv-head">
+              <div class="rv-av" style="background:#2c4a4e">C</div>
+              <div><span class="rv-name">Carolina V.</span><span class="rv-date">Hace 3 semanas</span></div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">"El lugar más tranquilo y hermoso de Villa Belgrano. La pileta rodeada de naturaleza es
+              una postal. Volví tres veces este verano y vuelvo siempre."</p>
+          </div>
+          <div class="rv-card" style="position:relative">
+            <span class="rv-g">G</span>
+            <div class="rv-head">
+              <div class="rv-av" style="background:#5e2a3a">L</div>
+              <div><span class="rv-name">Laura T.</span><span class="rv-date">Hace 2 meses</span></div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">"Le regalé a mi mamá el día spa completo. Me llamó llorando de emoción. Dijo que fue el
+              mejor regalo de su vida. Gracias, Casa Yina."</p>
+          </div>
+          <div class="rv-card" style="position:relative">
+            <span class="rv-g">G</span>
+            <div class="rv-head">
+              <div class="rv-av" style="background:#2a4c2e">V</div>
+              <div><span class="rv-name">Valentina M.</span><span class="rv-date">Hace 1 semana</span></div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">"Fui sola a descansar. El silencio, el verde, el río de fondo. Me quedé horas simplemente
+              siendo. Fue una de las mejores decisiones del año."</p>
+          </div>
+          <div class="rv-card" style="position:relative">
+            <span class="rv-g">G</span>
+            <div class="rv-head">
+              <div class="rv-av" style="background:#4a2c5e">A</div>
+              <div><span class="rv-name">Andrea P.</span><span class="rv-date">Hace 5 días</span></div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">"La merienda casera fue una sorpresa enorme. Todo hecho con amor. La atención de Yina es
+              cálida y genuina. Un lugar que tiene alma."</p>
+          </div>
+          <div class="rv-card" style="position:relative">
+            <span class="rv-g">G</span>
+            <div class="rv-head">
+              <div class="rv-av" style="background:#3a5035">J</div>
+              <div><span class="rv-name">Jimena R.</span><span class="rv-date">Hace 10 días</span></div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">"El masaje fue increíble y el lugar es de otro mundo. Vas de la ciudad y llegás a otro
+              planeta, todo verde, silencio y paz. Absolutamente recomendado."</p>
+          </div>
+          <!-- Duplicate for infinite -->
+          <div class="rv-card" style="position:relative">
+            <span class="rv-g">G</span>
+            <div class="rv-head">
+              <div class="rv-av" style="background:#3a5c35">M</div>
+              <div><span class="rv-name">María Fernanda G.</span><span class="rv-date">Hace 2 semanas</span></div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">"Una experiencia única. El lugar es una maravilla y el masaje fue lo que necesitaba. Me
+              fui completamente renovada."</p>
+          </div>
+          <div class="rv-card" style="position:relative">
+            <span class="rv-g">G</span>
+            <div class="rv-head">
+              <div class="rv-av" style="background:#7a5035">S</div>
+              <div><span class="rv-name">Sofía R.</span><span class="rv-date">Hace 1 mes</span></div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">"Fui con mis amigas y fue absolutamente mágico. La casona, la merienda, la atención.
+              ¡100% recomendado!"</p>
+          </div>
+          <div class="rv-card" style="position:relative">
+            <span class="rv-g">G</span>
+            <div class="rv-head">
+              <div class="rv-av" style="background:#5e2a3a">L</div>
+              <div><span class="rv-name">Laura T.</span><span class="rv-date">Hace 2 meses</span></div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">"Le regalé a mi mamá el día spa. Me llamó llorando. Dijo que fue el mejor regalo de su
+              vida."</p>
+          </div>
+          <div class="rv-card" style="position:relative">
+            <span class="rv-g">G</span>
+            <div class="rv-head">
+              <div class="rv-av" style="background:#2a4c2e">V</div>
+              <div><span class="rv-name">Valentina M.</span><span class="rv-date">Hace 1 semana</span></div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">"El silencio, el verde, el río de fondo. Me quedé horas simplemente siendo. Una de las
+              mejores decisiones del año."</p>
+          </div>
+          <div class="rv-card" style="position:relative">
+            <span class="rv-g">G</span>
+            <div class="rv-head">
+              <div class="rv-av" style="background:#4a2c5e">A</div>
+              <div><span class="rv-name">Andrea P.</span><span class="rv-date">Hace 5 días</span></div>
+            </div>
+            <div class="rv-stars">★★★★★</div>
+            <p class="rv-text">"La merienda casera fue una sorpresa. Todo hecho con amor. La atención de Yina es cálida
+              y genuina."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="map-section">
+      <div class="wrap">
+        <div class="map-grid">
+          <div class="map-info">
+            <div class="t-label" style="margin-bottom:.8rem" data-reveal="up">Cómo llegar</div>
+            <h2 class="t-h2" style="margin-bottom:1rem" data-reveal="up" data-delay="1">En el corazón de<br><em
+                class="t-italic t-gold">Villa Belgrano</em></h2>
+            <p class="t-body" style="margin-bottom:1.5rem" data-reveal="up" data-delay="2">A 40 minutos de Córdoba
+              Capital, rodeada de sierras y naturaleza serrana. El camino ya es parte de la experiencia.</p>
+            <div class="map-deets" data-reveal="up" data-delay="3">
+              <div class="map-det">
+                <div class="map-det-ic">📍</div><span>Villa Belgrano, Córdoba, Argentina</span>
+              </div>
+              <div class="map-det">
+                <div class="map-det-ic">🕐</div><span>Martes a Domingo · 10:00 – 20:00</span>
+              </div>
+              <div class="map-det">
+                <div class="map-det-ic">📱</div><span>+54 9 XXX XXX XXXX</span>
+              </div>
+              <div class="map-det">
+                <div class="map-det-ic">📸</div><span>@casayina · Instagram</span>
+              </div>
+            </div>
+            <a href="https://maps.app.goo.gl/vdyTPHNXFfrfZhzZ7" target="_blank" class="btn btn-ghost" data-reveal="up"
+              data-delay="4">
+              📍 Abrir en Google Maps
+            </a>
+          </div>
+          <div class="map-embed-wrap" data-reveal="right">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26736.58!2d-64.538!3d-31.372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943292e3bbd8c18b%3A0x3b02d8b2c7d4f9a5!2sVilla%20Belgrano%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1700000000000"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa Casa Yina - Villa Belgrano, Córdoba">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IG STRIP -->
+    <section class="ig-strip">
+      <div class="wrap">
+        <div class="t-label" data-reveal="up">📸 Seguinos</div>
+        <h2 class="t-h2" style="margin-top:.6rem" data-reveal="up" data-delay="1">@casayina</h2>
+        <p class="t-body" data-reveal="up" data-delay="2">Mirá el día a día del lugar que te espera</p>
+        <div class="ig-grid-small" data-reveal="up" data-delay="3">
+          <div class="ig-cell"><img
+              src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80" alt=""
+              style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="ig-cell"><img
+              src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=400&q=80" alt=""
+              style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="ig-cell"><img
+              src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=400&q=80" alt=""
+              style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="ig-cell"><img
+              src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=400&q=80" alt=""
+              style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="ig-cell"><img
+              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=400&q=80" alt=""
+              style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="ig-cell"><img
+              src="https://images.unsplash.com/photo-1439853949212-36089825a246?auto=format&fit=crop&w=400&q=80" alt=""
+              style="width:100%;height:100%;object-fit:cover"></div>
+        </div>
+        <a href="https://www.instagram.com/casayina" target="_blank" class="btn btn-ghost" data-reveal="up"
+          data-delay="4">
+          Ver Instagram completo →
+        </a>
+      </div>
+    </section>
+
+  </div><!-- /page-home -->
+
+
+  <!-- ════════════════════════════════════════════════════
+     SERVICIOS PAGE
+════════════════════════════════════════════════════ -->
+  <div class="page" id="page-servicios">
+    <div class="page-hero">
+      <div class="wrap page-hero-inner">
+        <div class="page-hero-eyebrow"><span class="t-label">Nuestras experiencias</span></div>
+        <h1 class="t-display page-hero-title">Experiencias<br><em class="t-italic t-gold">diseñadas</em> para vos</h1>
+        <p class="t-body page-hero-body">Cada servicio fue pensado con cuidado para que llegues agotada y te vayas
+          renovada, liviana y en paz con vos misma.</p>
+      </div>
+    </div>
+
+    <section class="services-full">
+      <div class="wrap">
+        <div class="sf-grid">
+          <div class="sf-card" data-reveal="up" data-delay="1">
+            <div class="sf-card-img">
+              <div class="ph ph-pileta">
+                <div class="ph-em">🌿</div>
+              </div>
+              <div class="sf-card-img-overlay"></div>
+            </div>
+            <div class="sf-card-body">
+              <span class="sf-tag">⭐ Más elegido</span>
+              <h3 class="t-h3 sf-title">Día Spa Completo</h3>
+              <div class="sf-dur">⏱ 3 horas · Hasta 6 personas</div>
+              <p class="sf-desc">La experiencia más completa de Casa Yina. Pileta, parque, merienda artesanal y masaje
+                relajante en un solo plan. Ideal para regalar o regalarte un día completo de bienestar.</p>
+              <ul class="sf-list">
+                <li>Acceso completo al parque y jardines</li>
+                <li>Uso de pileta con toallas incluidas</li>
+                <li>Merienda casera con infusión artesanal</li>
+                <li>Masaje relajante de 40 minutos</li>
+                <li>Aromaterapia con aceites naturales</li>
+                <li>Caminata guiada por el parque (opcional)</li>
+              </ul>
+              <div class="sf-foot">
+                <div>
+                  <div class="sf-price-from">Desde</div>
+                  <div class="sf-price-n">$XX.000</div>
+                  <div class="sf-price-u">por persona</div>
+                </div>
+                <button class="btn btn-gold" onclick="navigate('reservas')">Reservar este plan</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sf-card" data-reveal="up" data-delay="2">
+            <div class="sf-card-img">
+              <div class="ph ph-masaje">
+                <div class="ph-em">🤲</div>
+              </div>
+              <div class="sf-card-img-overlay"></div>
+            </div>
+            <div class="sf-card-body">
+              <span class="sf-tag">🌿 Bienestar</span>
+              <h3 class="t-h3 sf-title">Masaje Terapéutico</h3>
+              <div class="sf-dur">⏱ 60 minutos</div>
+              <p class="sf-desc">Un viaje hacia la relajación profunda. Técnicas suecas y de tejido profundo adaptadas a
+                tus necesidades para liberar tensiones acumuladas y reconectar con tu cuerpo.</p>
+              <ul class="sf-list">
+                <li>Masaje sueco o tejido profundo</li>
+                <li>Aceites esenciales 100% naturales</li>
+                <li>Ambiente con aromaterapia y música</li>
+                <li>Té de hierbas post-masaje</li>
+                <li>Atención personalizada</li>
+              </ul>
+              <div class="sf-foot">
+                <div>
+                  <div class="sf-price-from">Desde</div>
+                  <div class="sf-price-n">$XX.000</div>
+                  <div class="sf-price-u">por sesión</div>
+                </div>
+                <button class="btn btn-sage" onclick="navigate('reservas')">Reservar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sf-card" data-reveal="up" data-delay="1">
+            <div class="sf-card-img">
+              <div class="ph ph-merienda">
+                <div class="ph-em">🫖</div>
+              </div>
+              <div class="sf-card-img-overlay"></div>
+            </div>
+            <div class="sf-card-body">
+              <span class="sf-tag">🫖 Placer</span>
+              <h3 class="t-h3 sf-title">Tarde de Merienda & Parque</h3>
+              <div class="sf-dur">⏱ 2 horas</div>
+              <p class="sf-desc">Un momento para el alma. Recorrido por el parque junto al río, acceso a la pileta y
+                merienda casera servida en el jardín con todos los sabores de la sierra.</p>
+              <ul class="sf-list">
+                <li>Acceso al parque y pileta</li>
+                <li>Merienda casera completa y abundante</li>
+                <li>Infusiones artesanales y regionales</li>
+                <li>Mesa servida en el jardín o junto al río</li>
+              </ul>
+              <div class="sf-foot">
+                <div>
+                  <div class="sf-price-from">Desde</div>
+                  <div class="sf-price-n">$XX.000</div>
+                  <div class="sf-price-u">por persona</div>
+                </div>
+                <button class="btn btn-sage" onclick="navigate('reservas')">Reservar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sf-card" data-reveal="up" data-delay="2">
+            <div class="sf-card-img">
+              <div class="ph ph-parque">
+                <div class="ph-em">👯‍♀️</div>
+              </div>
+              <div class="sf-card-img-overlay"></div>
+            </div>
+            <div class="sf-card-body">
+              <span class="sf-tag">💛 Grupos</span>
+              <h3 class="t-h3 sf-title">Experiencia Grupal</h3>
+              <div class="sf-dur">⏱ 4 horas · Grupos de amigas</div>
+              <p class="sf-desc">Para celebrar, festejar o simplemente estar juntas. Ideal para cumpleaños, despedidas,
+                retiros o simplemente para darse un lujo con las amigas.</p>
+              <ul class="sf-list">
+                <li>Espacio privado y exclusivo</li>
+                <li>Masajes para todo el grupo</li>
+                <li>Merienda abundante y personalizada</li>
+                <li>Decoración especial (opcional)</li>
+                <li>Atención dedicada</li>
+              </ul>
+              <div class="sf-foot">
+                <div>
+                  <div class="sf-price-from">Precio</div>
+                  <div class="sf-price-n" style="font-size:1.4rem">Consultar</div>
+                  <div class="sf-price-u">según grupo</div>
+                </div>
+                <button class="btn btn-ghost" onclick="navigate('reservas')">Consultar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE STEPS -->
+    <section class="exp-steps">
+      <div class="wrap">
+        <div class="steps-header">
+          <div class="t-label" style="margin-bottom:.6rem" data-reveal="up">La experiencia</div>
+          <h2 class="t-h2" data-reveal="up" data-delay="1">Así se <em class="t-italic t-gold">vive un día</em> en Casa
+            Yina</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step-item" data-reveal="up" data-delay="1">
+            <div class="step-num">1</div>
+            <div class="step-icon">📅</div>
+            <div class="step-title">Reservá tu día</div>
+            <p class="step-desc">Elegí el plan y la fecha que mejor te queden. Te confirmamos en menos de 24 horas.</p>
+          </div>
+          <div class="step-item" data-reveal="up" data-delay="2">
+            <div class="step-num">2</div>
+            <div class="step-icon">🚗</div>
+            <div class="step-title">Llegá al refugio</div>
+            <p class="step-desc">40 minutos desde Córdoba. El camino serrano ya es parte de la experiencia.</p>
+          </div>
+          <div class="step-item" data-reveal="up" data-delay="3">
+            <div class="step-num">3</div>
+            <div class="step-icon">🌿</div>
+            <div class="step-title">Desconectate</div>
+            <p class="step-desc">El parque, la pileta y el río te esperan. Aquí el tiempo corre diferente.</p>
+          </div>
+          <div class="step-item" data-reveal="up" data-delay="4">
+            <div class="step-num">4</div>
+            <div class="step-icon">✨</div>
+            <div class="step-title">Volvé renovada</div>
+            <p class="step-desc">Te vas liviana, en paz y con ganas de volver. Siempre.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div><!-- /page-servicios -->
+
+
+  <!-- ════════════════════════════════════════════════════
+     RESERVAS PAGE
+════════════════════════════════════════════════════ -->
+  <div class="page" id="page-reservas">
+    <div class="page-hero">
+      <div class="wrap page-hero-inner">
+        <div class="page-hero-eyebrow"><span class="t-label">Hacé tu reserva</span></div>
+        <h1 class="t-display page-hero-title">Tu día de spa<br><em class="t-italic t-gold">empieza aquí</em></h1>
+        <p class="t-body page-hero-body">Completá el formulario y te contactamos para confirmar todos los detalles.
+          También podés escribirnos por WhatsApp.</p>
+      </div>
+    </div>
+
+    <section class="booking-page">
+      <div class="wrap">
+        <div class="booking-layout">
+          <div class="bl-info">
+            <div class="t-label" style="margin-bottom:.8rem" data-reveal="up">Información</div>
+            <h2 class="t-h2" style="margin-bottom:1.2rem" data-reveal="up" data-delay="1">¿Por qué reservar<br><em
+                class="t-italic t-gold">con nosotras?</em></h2>
+            <p class="t-body" style="margin-bottom:2rem" data-reveal="up" data-delay="2">Cada reserva es tratada con
+              cuidado. Sabemos que tu tiempo libre es valioso y lo honramos.</p>
+            <div class="bl-feats">
+              <div class="bl-feat" data-reveal="up" data-delay="2">
+                <div class="bl-feat-ic">🌿</div>
+                <div><span class="bl-feat-title">Elegí tu experiencia</span><span class="bl-feat-sub">Día Spa, masaje,
+                    merienda o grupales</span></div>
+              </div>
+              <div class="bl-feat" data-reveal="up" data-delay="3">
+                <div class="bl-feat-ic">📅</div>
+                <div><span class="bl-feat-title">Fecha y horario flexible</span><span class="bl-feat-sub">Martes a
+                    domingos · Mañana y tarde</span></div>
+              </div>
+              <div class="bl-feat" data-reveal="up" data-delay="4">
+                <div class="bl-feat-ic">⚡</div>
+                <div><span class="bl-feat-title">Confirmación rápida</span><span class="bl-feat-sub">Respondemos en
+                    menos de 24 horas</span></div>
+              </div>
+              <div class="bl-feat" data-reveal="up" data-delay="5">
+                <div class="bl-feat-ic">💚</div>
+                <div><span class="bl-feat-title">Sin complicaciones</span><span class="bl-feat-sub">Para vos o como
+                    regalo</span></div>
+              </div>
+              <div class="bl-feat" data-reveal="up" data-delay="6">
+                <div class="bl-feat-ic">🎁</div>
+                <div><span class="bl-feat-title">También gift cards</span><span class="bl-feat-sub"><button
+                      class="btn btn-ghost btn-sm" onclick="navigate('regalos')" style="padding:.4rem 1rem">Ver opciones
+                      de regalo →</button></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div data-reveal="right">
+            <div class="book-form-card">
+              <div class="bfc-head">
+                <h3 class="t-h3">Solicitar reserva</h3>
+                <p>Te contactamos para confirmar la disponibilidad</p>
+              </div>
+              <form id="bookForm">
+                <div class="fgroup">
+                  <label class="flabel">Elegí tu experiencia *</label>
+                  <select class="fselect" name="plan" required>
+                    <option value="" disabled selected>Seleccioná un plan...</option>
+                    <option>🌿 Día Spa Completo — 3 horas</option>
+                    <option>🤲 Masaje Terapéutico — 60 min</option>
+                    <option>🫖 Tarde de Merienda &amp; Parque — 2 hs</option>
+                    <option>👯‍♀️ Experiencia Grupal — 4 horas</option>
+                    <option>✨ Experiencia personalizada</option>
+                  </select>
+                </div>
+                <div class="frow">
+                  <div class="fgroup">
+                    <label class="flabel">Fecha preferida *</label>
+                    <input type="date" class="finput" name="fecha" id="bookDate" required>
+                  </div>
+                  <div class="fgroup">
+                    <label class="flabel">Horario *</label>
+                    <select class="fselect" name="horario" required>
+                      <option value="" disabled selected>Elegí...</option>
+                      <option>Mañana (10:00 – 13:00)</option>
+                      <option>Tarde (15:00 – 18:00)</option>
+                      <option>Tarde noche (17:00 – 20:00)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="frow">
+                  <div class="fgroup">
+                    <label class="flabel">Tu nombre *</label>
+                    <input type="text" class="finput" name="nombre" placeholder="¿Cómo te llamás?" required>
+                  </div>
+                  <div class="fgroup">
+                    <label class="flabel">Personas</label>
+                    <select class="fselect" name="personas">
+                      <option>1 persona</option>
+                      <option>2 personas</option>
+                      <option>3 personas</option>
+                      <option>4 personas</option>
+                      <option>5 o más</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="fgroup">
+                  <label class="flabel">WhatsApp o email *</label>
+                  <input type="text" class="finput" name="contacto" placeholder="Para confirmarte la reserva" required>
+                </div>
+                <div class="fgroup">
+                  <label class="flabel">Contanos algo (opcional)</label>
+                  <textarea class="ftextarea" name="notas"
+                    placeholder="Cumpleaños, alergias, preferencias, sorpresas..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-gold fsubmit">
+                  🌿 Solicitar reserva
+                </button>
+              </form>
+              <div class="form-success-state" id="bookSuccess">
+                <div class="fss-icon">🌿</div>
+                <div class="fss-title">¡Recibimos tu solicitud!</div>
+                <p class="fss-sub">Te contactamos en las próximas horas para confirmar todos los detalles. ¡Nos vemos en
+                  Casa Yina!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div><!-- /page-reservas -->
+
+
+  <!-- ════════════════════════════════════════════════════
+     REGALOS PAGE
+════════════════════════════════════════════════════ -->
+  <div class="page" id="page-regalos">
+    <div class="page-hero">
+      <div class="wrap page-hero-inner">
+        <div class="page-hero-eyebrow"><span class="t-label">Para la persona que querés</span></div>
+        <h1 class="t-display page-hero-title">✨ Regalá una<br><em class="t-italic t-gold">experiencia</em></h1>
+        <p class="t-body page-hero-body">La forma más linda de decirle que la querés. Porque los regalos que se sienten,
+          no se olvidan.</p>
+      </div>
+    </div>
+
+    <section class="gifts-page">
+      <div class="wrap">
+        <div class="gp-grid">
+          <div class="gp-card" data-reveal="up" data-delay="1">
+            <span class="gp-icon">🎁</span>
+            <h3 class="t-h3 gp-title">Gift Card Digital</h3>
+            <p class="gp-body">Enviá al instante. Ella elige cuándo y cómo disfrutarla. Incluye tu mensaje personal y el
+              plan elegido.</p>
+            <div class="gp-price">Desde $XX.000</div>
+            <a href="https://wa.me/+54XXXXXXXXXX?text=Hola!%20Quiero%20comprar%20una%20gift%20card%20de%20Casa%20Yina"
+              target="_blank" class="btn btn-terra">Ver gift cards</a>
+          </div>
+          <div class="gp-card" data-reveal="up" data-delay="2">
+            <span class="gp-icon">💆‍♀️</span>
+            <h3 class="t-h3 gp-title">Día Spa de Regalo</h3>
+            <p class="gp-body">Regalá el Día Spa Completo. Pileta, merienda y masaje. El regalo que ella nunca olvidará.
+            </p>
+            <div class="gp-price">$XX.000</div>
+            <button class="btn btn-gold" onclick="navigate('reservas')">Regalar este plan</button>
+          </div>
+          <div class="gp-card" data-reveal="up" data-delay="3">
+            <span class="gp-icon">🌺</span>
+            <h3 class="t-h3 gp-title">Para Mamá</h3>
+            <p class="gp-body">El Día de la Madre merece algo especial. Armamos juntas una experiencia que la haga
+              llorar de emoción.</p>
+            <div class="gp-price">Consultar</div>
+            <a href="https://wa.me/+54XXXXXXXXXX?text=Hola!%20Quiero%20armar%20una%20experiencia%20para%20el%20d%C3%ADa%20de%20la%20madre%20en%20Casa%20Yina"
+              target="_blank" class="btn btn-sage">Consultar</a>
+          </div>
+        </div>
+
+        <!-- CUSTOM EXPERIENCE -->
+        <div class="gp-custom" data-reveal="up">
+          <div class="gpc-text">
+            <div class="t-label" style="margin-bottom:.8rem">Personalizado</div>
+            <h2 class="t-h2" style="margin-bottom:1rem">Armá la experiencia<br><em class="t-italic t-gold">perfecta para
+                ella</em></h2>
+            <p class="t-body" style="margin-bottom:2rem">No hay dos personas iguales. Armamos juntas cada detalle: qué
+              servicios incluir, la fecha, las sorpresas, los mensajes. Vos sabés lo que ella necesita. Nosotras lo
+              hacemos realidad.</p>
+            <div class="gift-btns">
+              <a href="https://wa.me/+54XXXXXXXXXX?text=Hola!%20Quiero%20armar%20una%20experiencia%20personalizada%20en%20Casa%20Yina"
+                target="_blank" class="btn btn-gold">💬 Hablar con Yina</a>
+              <a href="https://www.instagram.com/casayina" target="_blank" class="btn btn-ghost">📸 Ver inspiración en
+                IG</a>
+            </div>
+          </div>
+          <div class="gpc-visual">
+            <div class="ph ph-regalo" style="height:100%;min-height:280px">
+              <div class="ph-em">🎀</div><span>Imagen regalo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- OCCASIONS -->
+        <div style="text-align:center;padding:2rem 0">
+          <div class="t-label" style="margin-bottom:1rem" data-reveal="up">Perfecta para cualquier ocasión</div>
+          <div style="display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center" data-reveal="up" data-delay="1">
+            <span
+              style="background:var(--white-alpha);border:1px solid var(--border);border-radius:var(--r-pill);padding:.5rem 1.2rem;font-family:var(--ff-label);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-3)">💛
+              Cumpleaños</span>
+            <span
+              style="background:var(--white-alpha);border:1px solid var(--border);border-radius:var(--r-pill);padding:.5rem 1.2rem;font-family:var(--ff-label);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-3)">🌸
+              Día de la Madre</span>
+            <span
+              style="background:var(--white-alpha);border:1px solid var(--border);border-radius:var(--r-pill);padding:.5rem 1.2rem;font-family:var(--ff-label);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-3)">💍
+              Despedida de soltera</span>
+            <span
+              style="background:var(--white-alpha);border:1px solid var(--border);border-radius:var(--r-pill);padding:.5rem 1.2rem;font-family:var(--ff-label);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-3)">🎓
+              Graduación</span>
+            <span
+              style="background:var(--white-alpha);border:1px solid var(--border);border-radius:var(--r-pill);padding:.5rem 1.2rem;font-family:var(--ff-label);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-3)">💝
+              Aniversario</span>
+            <span
+              style="background:var(--white-alpha);border:1px solid var(--border);border-radius:var(--r-pill);padding:.5rem 1.2rem;font-family:var(--ff-label);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-3)">🌺
+              Sin excusa necesaria</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div><!-- /page-regalos -->
+
+
+  <!-- ════════════════════════════════════════════════════
+     NOSOTRAS PAGE
+════════════════════════════════════════════════════ -->
+  <div class="page" id="page-nosotras">
+    <div class="page-hero">
+      <div class="wrap page-hero-inner">
+        <div class="page-hero-eyebrow"><span class="t-label">Nuestra historia</span></div>
+        <h1 class="t-display page-hero-title">El alma detrás<br><em class="t-italic t-gold">de Casa Yina</em></h1>
+        <p class="t-body page-hero-body">Una casona histórica, un parque lleno de vida y una mujer que creyó que
+          descansar de verdad era posible.</p>
+      </div>
+    </div>
+
+    <section class="nosotras-page">
+      <div class="wrap">
+        <div class="ns-hero-grid">
+          <div class="ns-text">
+            <div class="t-label" style="margin-bottom:.8rem" data-reveal="up">Nuestra historia</div>
+            <h2 class="t-h2" style="margin-bottom:1.2rem" data-reveal="up" data-delay="1">Un lugar donde<br><em
+                class="t-italic t-gold">el tiempo se detiene</em></h2>
+            <p class="t-body" data-reveal="up" data-delay="2">Casa Yina nació del sueño de crear un refugio auténtico en
+              Villa Belgrano. Una casona histórica rodeada de naturaleza, con el sonido del río siempre de fondo, donde
+              las mujeres pudieran descansar de verdad.</p>
+            <p class="t-body" data-reveal="up" data-delay="3">Aquí no hay apuro. El parque, la pileta, los masajes y la
+              merienda casera son una invitación a soltar todo lo que no necesitás cargar y volverte a encontrar.</p>
+            <button class="btn btn-gold" onclick="navigate('reservas')" data-reveal="up" data-delay="4">Reservar mi
+              lugar</button>
+          </div>
+          <div class="ns-visual" data-reveal="right">
+            <div class="ns-img-main">
+              <div class="ph ph-casona" style="min-height:480px">
+                <div class="ph-em">🏡</div><span>La casona</span>
+              </div>
+            </div>
+            <div class="ns-img-float">
+              <div class="ph ph-parque" style="height:100%;min-height:200px">
+                <div class="ph-em">🌳</div><span>El parque</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ns-values">
+          <div style="text-align:center;margin-bottom:3rem" data-reveal="up">
+            <div class="t-label" style="margin-bottom:.6rem">Lo que nos define</div>
+            <h2 class="t-h2">Nuestros <em class="t-italic t-gold">valores</em></h2>
+          </div>
+          <div class="ns-vals-grid">
+            <div class="ns-val" data-reveal="up" data-delay="1">
+              <div class="ns-val-icon">🌿</div>
+              <div class="ns-val-title">Autenticidad</div>
+              <p class="ns-val-desc">Sin artificios. Lo que ves es lo que encontrás: naturaleza real, sabores caseros y
+                cuidado genuino.</p>
+            </div>
+            <div class="ns-val" data-reveal="up" data-delay="2">
+              <div class="ns-val-icon">💚</div>
+              <div class="ns-val-title">Cuidado real</div>
+              <p class="ns-val-desc">Cada mujer que llega recibe atención personalizada. Acá tu bienestar es la
+                prioridad, no un servicio más.</p>
+            </div>
+            <div class="ns-val" data-reveal="up" data-delay="3">
+              <div class="ns-val-icon">🌊</div>
+              <div class="ns-val-title">Conexión con la naturaleza</div>
+              <p class="ns-val-desc">El río, las sierras y el verde son parte de cada experiencia. La naturaleza sana;
+                nosotras acompañamos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-grid" data-reveal="up">
+          <div class="map-info">
+            <div class="t-label" style="margin-bottom:.8rem">Cómo llegar</div>
+            <h2 class="t-h2" style="margin-bottom:1rem">Villa Belgrano,<br><em class="t-italic t-gold">Córdoba</em></h2>
+            <div class="map-deets">
+              <div class="map-det">
+                <div class="map-det-ic">📍</div><span>Villa Belgrano, Córdoba, Argentina</span>
+              </div>
+              <div class="map-det">
+                <div class="map-det-ic">🕐</div><span>Martes a Domingo · 10:00 – 20:00</span>
+              </div>
+              <div class="map-det">
+                <div class="map-det-ic">📱</div><span>+54 9 XXX XXX XXXX</span>
+              </div>
+              <div class="map-det">
+                <div class="map-det-ic">📸</div><span>@casayina</span>
+              </div>
+            </div>
+            <a href="https://maps.app.goo.gl/vdyTPHNXFfrfZhzZ7" target="_blank" class="btn btn-ghost">📍 Ver en Google
+              Maps</a>
+          </div>
+          <div class="map-embed-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26736.58!2d-64.538!3d-31.372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943292e3bbd8c18b%3A0x3b02d8b2c7d4f9a5!2sVilla%20Belgrano%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1700000000000"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa Casa Yina"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div><!-- /page-nosotras -->
+
+
+  <!-- ════════════════════════════════════════════════════
+     FOOTER (shared)
+════════════════════════════════════════════════════ -->
+  <footer id="main-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="f-brand-name" style="display:none">Casa Yina</div>
+          <div class="f-brand-sub" style="display:none">Spa · Villa Belgrano · Córdoba</div>
+          <img src="logo.png" alt="Casa Yina"
+            style="height:52px;width:auto;object-fit:contain;mix-blend-mode:screen;filter:brightness(1.05);margin-bottom:1.2rem;display:block;">
+          <p class="f-brand-desc">Un refugio de paz donde la naturaleza, el río y el descanso se encuentran en perfecta
+            armonía.</p>
+          <div class="f-socials">
+            <a href="https://www.instagram.com/casayina" target="_blank" class="fsoc" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://wa.me/+54XXXXXXXXXX" target="_blank" class="fsoc" aria-label="WhatsApp">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+            </a>
+            <a href="https://maps.app.goo.gl/vdyTPHNXFfrfZhzZ7" target="_blank" class="fsoc" aria-label="Maps">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="f-col">
+          <h5>Experiencias</h5>
+          <div class="f-links">
+            <a onclick="navigate('servicios')">Día Spa Completo</a>
+            <a onclick="navigate('servicios')">Masaje Terapéutico</a>
+            <a onclick="navigate('servicios')">Tarde de Merienda</a>
+            <a onclick="navigate('servicios')">Experiencia Grupal</a>
+          </div>
+        </div>
+        <div class="f-col">
+          <h5>Regalos</h5>
+          <div class="f-links">
+            <a onclick="navigate('regalos')">Gift Cards</a>
+            <a onclick="navigate('regalos')">Experiencia personalizada</a>
+            <a onclick="navigate('regalos')">Para mamá</a>
+            <a onclick="navigate('regalos')">Para amigas</a>
+          </div>
+        </div>
+        <div class="f-col">
+          <h5>Contacto</h5>
+          <div class="f-links">
+            <a onclick="navigate('reservas')">Hacer una reserva</a>
+            <a href="https://wa.me/+54XXXXXXXXXX" target="_blank">WhatsApp</a>
+            <a href="https://www.instagram.com/casayina" target="_blank">Instagram</a>
+            <a onclick="navigate('nosotras')">Cómo llegar</a>
+          </div>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p class="f-copy">© 2025 Casa Yina · Villa Belgrano, Córdoba · Todos los derechos reservados</p>
+        <p class="f-copy">Hecho con 🌿 en Córdoba, Argentina</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/+54XXXXXXXXXX?text=Hola!%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20Casa%20Yina"
+    target="_blank" class="wa-fab" aria-label="WhatsApp">
+    <svg width="58" height="58" viewBox="0 0 24 24" fill="white">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+  </a>
+
+  <!-- ════════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════ -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
