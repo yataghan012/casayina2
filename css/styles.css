@@ -899,6 +899,7 @@ body::after {
   opacity: 0;
   animation: fadeUp 1s .45s var(--ease-out) forwards;
   max-width: 880px;
+  font-size: 130px;
 }
 
 .hero-title .italic-line {
