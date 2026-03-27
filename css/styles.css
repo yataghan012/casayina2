@@ -2841,6 +2841,18 @@ footer {
     grid-template-rows: 180px 180px 180px
   }
 
+  /* Fix header: stack title and button vertically, button full width */
+  .gallery-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gallery-header .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
   .gmosaic-item:nth-child(n) {
     grid-column: span 1;
     grid-row: span 1
